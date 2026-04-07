@@ -1,3 +1,2 @@
-# Ignore all data files
-dataset/
+# Ignore all CSV data files
 *.csv

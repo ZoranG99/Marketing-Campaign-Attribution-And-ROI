@@ -1,4 +1,11 @@
--- 1. Create Campaigns Table
+-- Droping existing tables to ensure a clean slate
+DROP TABLE IF EXISTS events CASCADE;
+DROP TABLE IF EXISTS transactions CASCADE;
+DROP TABLE IF EXISTS campaigns CASCADE;
+DROP TABLE IF EXISTS customers CASCADE;
+DROP TABLE IF EXISTS products CASCADE;
+
+-- 1. Creating Campaigns Table
 CREATE TABLE campaigns (
     campaign_id INT PRIMARY KEY,
     channel VARCHAR(50),
@@ -10,7 +17,7 @@ CREATE TABLE campaigns (
     expected_uplift NUMERIC(5,3)
 );
 
--- 2. Create Customers Table
+-- 2. Creating Customers Table
 CREATE TABLE customers (
     customer_id INT PRIMARY KEY,
     signup_date DATE,
@@ -22,7 +29,7 @@ CREATE TABLE customers (
     acquisition_channel VARCHAR(50)
 );
 
--- 3. Create Products Table
+-- 3. Creating Products Table
 CREATE TABLE products (
     product_id INT PRIMARY KEY,
     category VARCHAR(50),
@@ -33,7 +40,7 @@ CREATE TABLE products (
     is_premium INT
 );
 
--- 4. Create Events Table
+-- 4. Creating Events Table
 CREATE TABLE events (
     event_id BIGINT PRIMARY KEY,
     timestamp TIMESTAMP,
@@ -49,7 +56,7 @@ CREATE TABLE events (
     experiment_group VARCHAR(50)
 );
 
--- 5. Create Transactions Table
+-- 5. Creating Transactions Table
 CREATE TABLE transactions (
     transaction_id BIGINT PRIMARY KEY,
     timestamp TIMESTAMP,
@@ -74,27 +81,27 @@ INSERT INTO products (product_id, category, brand, base_price, price_tier, launc
 VALUES (0, 'Site Browse', 'None', 0.00, 'None', '2000-01-01', 0);
 
 
--- 1. Import Dimension Tables
+-- 1. Importing Dimension Tables
 COPY campaigns 
-FROM 'D:\Data_Science\Projects\Portfolio_Projects\marketing-campaign-attribution-dashboard\dataset\processed\campaigns_cleaned.csv' 
+FROM 'D:\Data_Science\Projects\Portfolio_Projects\Marketing-Campaign-Attribution-And-ROI\Dataset\Processed\campaigns_cleaned.csv' 
 DELIMITER ',' CSV HEADER;
 
 COPY customers 
-FROM 'D:\Data_Science\Projects\Portfolio_Projects\marketing-campaign-attribution-dashboard\dataset\processed\customers_cleaned.csv' 
+FROM 'D:\Data_Science\Projects\Portfolio_Projects\Marketing-Campaign-Attribution-And-ROI\Dataset\Processed\customers_cleaned.csv' 
 DELIMITER ',' CSV HEADER;
 
 COPY products 
-FROM 'D:\Data_Science\Projects\Portfolio_Projects\marketing-campaign-attribution-dashboard\dataset\processed\products_cleaned.csv' 
+FROM 'D:\Data_Science\Projects\Portfolio_Projects\Marketing-Campaign-Attribution-And-ROI\Dataset\Processed\products_cleaned.csv' 
 DELIMITER ',' CSV HEADER;
 
 
--- 2. Import Fact Tables
+-- 2. Importing Fact Tables
 COPY events 
-FROM 'D:\Data_Science\Projects\Portfolio_Projects\marketing-campaign-attribution-dashboard\dataset\processed\events_cleaned.csv' 
+FROM 'D:\Data_Science\Projects\Portfolio_Projects\Marketing-Campaign-Attribution-And-ROI\Dataset\Processed\events_cleaned.csv' 
 DELIMITER ',' CSV HEADER;
 
 COPY transactions 
-FROM 'D:\Data_Science\Projects\Portfolio_Projects\marketing-campaign-attribution-dashboard\dataset\processed\transactions_cleaned.csv' 
+FROM 'D:\Data_Science\Projects\Portfolio_Projects\Marketing-Campaign-Attribution-And-ROI\Dataset\Processed\transactions_cleaned.csv' 
 DELIMITER ',' CSV HEADER;
 
 

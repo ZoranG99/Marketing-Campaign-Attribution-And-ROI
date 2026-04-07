@@ -13,13 +13,13 @@
 
 
 ## 📋 Table of Contents
-1. [Project Overview](#1-project-overview)
-2. [The Business Problem](#2-the-business-problem)
-3. [Tech Stack & Architecture](#3-tech-stack--architecture)
-4. [Data Engineering & Database Setup](#4-data-engineering--database-setup)
-5. [Data Modeling (Star Schema)](#5-data-modeling-star-schema)
-6. [Dashboard & Key Insights](#6-dashboard--key-insights)
-7. [How to Run This Project](#7-how-to-run-this-project)
+1. [Project Overview](#1--project-overview)
+2. [The Business Problem](#2--the-business-problem)
+3. [Tech Stack & Architecture](#3--tech-stack--architecture)
+4. [Data Engineering & Database Setup](#4--data-engineering--database-setup)
+5. [Data Modeling (Star Schema)](#5--data-modeling-star-schema)
+6. [Dashboard & Key Insights](#6--dashboard--key-insights)
+7. [How to Run This Project](#7--how-to-run-this-project)
 
 ## 1. 🚀 Project Overview
 This project is an end-to-end data analytics portfolio piece designed to simulate a real-world enterprise environment. Utilizing a comprehensive [Marketing and E-Commerce Analytics Dataset from Kaggle](https://www.kaggle.com/datasets/geethasagarbonthu/marketing-and-e-commerce-analytics-dataset), I engineered a relational database warehouse in PostgreSQL and built an interactive, executive-facing Power BI dashboard. 
