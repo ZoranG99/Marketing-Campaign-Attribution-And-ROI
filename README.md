@@ -7,7 +7,7 @@
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) 
 ![Kaggle](https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)
 
-![Dashboard Demo](assets/dashboard_gif.gif)
+![Dashboard Demo](Assets/dashboard_gif.gif)
 
 ### 👉 [Click Here to View the Live Interactive Dashboard](https://app.powerbi.com/view?r=eyJrIjoiYjE5ZTc4NzItYjE2Ny00ODM5LThiZTgtMzc0MWQ2YmI5NjVkIiwidCI6IjZiYTYzMzM5LTczNGYtNDdhMi05ZDhmLWY5NDk2YmM5NWI0MSIsImMiOjl9)
 
@@ -53,7 +53,7 @@ To simulate a true enterprise environment, the raw Kaggle dataset was first proc
 ## 5. 🕸️ Data Modeling (Star Schema)
 Inside Power BI, the relational database was transformed into a highly optimized **Star Schema**. This architecture ensures rapid calculation speeds across millions of rows and provides intuitive, directional filtering.
 
-![Star Schema](assets/Star_Schema.png)
+![Star Schema](Assets/Star_Schema.png)
 
 ### The "Waterfall" Filter & The Master Calendar
 A common issue in Power BI is filtering across multiple Fact tables. To ensure that slicing by date filtered both the `events` table (traffic) and the `transactions` table (revenue) simultaneously, a master **Calendar Table** was generated using DAX and connected to both Fact tables.
@@ -81,21 +81,21 @@ The final Power BI dashboard was designed with a dark-mode, executive-ready UI. 
 
 ### Page 1: Executive Overview
 Designed for the CMO to gauge overall business health in under 5 seconds.
-![Overview Page](assets/Overview.png)
+![Overview Page](Assets/Overview.png)
 * **Insight:** The business generated $8.37M in revenue from 93K transactions, maintaining a solid Average Order Value of $90.36. 
 * **Insight:** The overall Conversion Rate sits at 4.63%, but the timeline trend reveals a slight downward trajectory in revenue year-over-year.
 * **Recommendation:** Conduct an immediate audit of the highest-spending campaigns from the previous two quarters to identify the root cause of the downward revenue trend and stabilize top-line growth.
 
 ### Page 2: Campaign Attribution
 A deep dive into channel efficiency utilizing a custom scatter plot matrix.
-![Campaigns Page](assets/Campaigns.png)
+![Campaigns Page](Assets/Campaigns.png)
 * **Insight (The "Volume Monster"):** `Organic/Direct` drives the most total revenue ($1.69M) but suffers from a terrible conversion rate (1.88%). It acts as a massive net for window-shoppers. 
 * **Insight (The "Snipers"):** `Affiliate` and `Paid Search` drive a fraction of the traffic but convert at roughly 8%. 
 * **Recommendation:** Shift budget away from buying sheer volume and pour it into Affiliate marketing to scale highly qualified, high-intent traffic.
 
 ### Page 3: Audience Demographics
 Customer-centric targeting metrics to refine future ad spend and targeting.
-![Audience Page](assets/Audience.png) 
+![Audience Page](Assets/Audience.png) 
 * **Insight:** Revenue is split perfectly evenly between Male and Female demographics (~48% each), meaning campaigns do not need to be heavily gender-gated.
 * **Insight:** The 25-44 age bracket makes up the vast majority of purchasing power.
 * **Insight:** While "Bronze" tier loyalty members generate the highest *total* volume, the Average Order Value remains remarkably flat across all loyalty tiers (~$88-$91). 
